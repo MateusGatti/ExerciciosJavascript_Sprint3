@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Notas</title>
+</head>
+
+<body>
+
+    <form id="formnotas">
+        <input type="text" required name="notaum" id="notaum">
+        <input type="text" name="notadois" id="notadois" required>
+        <button type="submit" class="btn">Calcular</button>
+    </form>
+
+    <script>
+     //pegando elemento notaum pelo GetElementByID
+     var notaum = document.getElementById('notaum');
+     //escrevendo o elemento notaum no console
+     console.log('notaum');
+
+     //pegando elemento notadois pelo querySelector
+     //pegar pelo id usamos a #, ex: #NomeDoIdDoElemento
+     var notadois = document.querySelector('#notadois');
+    //escrevendo o elemento notadois no console
+    console.log('notadois');
+
+    //pegando elemento btncalcular pelo querySelector
+    //pegar pela class usamos . ex: .NomeDaClass
+    var btnCalcular = document.querySelector('.btn');
+    //escrevendo o elemento notadois no console
+    //console.log(btnCalcular);
+
+    //inserindo interatividade no botão calcular
+    //ideia de function e metódo é a mesma
+    
+    btnCalcular.addEventListener("click", function(event){
+        //esse event é para modificar o submit, "previnir que aconteça", no caso, o refresh da página
+        event.preventDefault();
+        //converte a string pra float e mostra o resultado da equação no log
+        console.log((parseInt(notaum.value) + parseInt(notadois.value)) / 2);
+        
+    })
+
+
+    </script>
+
+</body>
+
+</html>

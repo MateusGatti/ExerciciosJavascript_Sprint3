@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Preço Maça</title>
+</head>
+
+<body>
+
+    <form id="formprecomaca">
+        <input type="text" required name="quantidademaca" id="quantidademaca">
+        <button type="submit" id="btnCalcular">Calcular</button>
+    </form>
+
+    <script>
+     //let - posso alterar o valor posteriormente
+     //const - não posso alterar o valor posteriormente
+
+     let qtdMaca = document.querySelector('#quantidademaca');
+     let btnCalcular = document.querySelector('#btnCalcular');
+
+     btnCalcular.addEventListener('click', function(event){
+         event.preventDefault();
+         if(parseInt(qtdMaca.value) >12){
+             console.log(parseInt(qtdMaca.value) * parseFloat('0.3'));
+         }else{
+            console.log(parseInt(qtdMaca.value) * parseFloat('0.4'));
+         }
+     })
+
+    </script>
+
+</body>
+
+</html>
