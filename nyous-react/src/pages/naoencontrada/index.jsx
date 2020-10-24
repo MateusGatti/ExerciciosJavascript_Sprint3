@@ -2,14 +2,16 @@ import React from 'react';
 import Menu from '../../components/menu';
 import Rodape from '../../components/rodape';
 
-const Eventos = () => {
-    return(
+const NaoEncontrada = () => {
+    return (
+        
         <div>
             <Menu />
-            <h1>Eventos</h1>
+            <h1>404</h1>
             <Rodape />
         </div>
+        
     )
 }
 
-export default Eventos;
+export default NaoEncontrada;

@@ -1,16 +1,20 @@
 import React from 'react';
+import logo from '../../assets/img/Logo.svg';
+import {Form, Button, Container} from 'react-bootstrap';
 import Menu from '../../components/menu';
 import Rodape from '../../components/rodape';
-import {Container, Form, Button} from 'react-bootstrap';
 import './index.css';
 
+
 const Cadastrar = () => {
+
     return (
         <div>
         <Menu />
         <Container className='form-height'>
                 <Form className='form-signin' >
                     <div className='text-center'>
+                     <img src={logo} alt='NYOUS' style={{ width : '64px'}} />
                     </div>
                     <br/>
                     <small>Informe os dados Abaixo</small>
@@ -39,6 +43,7 @@ const Cadastrar = () => {
         <Rodape />
         </div>
     )
+
 }
 
-export default Cadastrar
+export default Cadastrar;
